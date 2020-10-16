@@ -7,7 +7,6 @@ Download and include the files in on your main app page or anywhere you want to 
 ## Features
 
 - 📱 Responsive
-- 👓 A11Y compatible
 - ✨ Optional ripple-like fancy revealing effect
 - 😈 Simple but highly extensible API. Create your own toast types and customize them.
 - 🎃 Support to render custom HTML content within the toasts
