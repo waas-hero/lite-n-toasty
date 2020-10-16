@@ -1,4 +1,4 @@
-@-webkit-keyframes notyf-fadeinup {
+@-webkit-keyframes lite-n-toasty-fadeinup {
     0% {
         opacity: 0;
         transform: translateY(25%);
@@ -8,7 +8,7 @@
         transform: translateY(0);
     }
 }
-@keyframes notyf-fadeinup {
+@keyframes lite-n-toasty-fadeinup {
     0% {
         opacity: 0;
         transform: translateY(25%);
@@ -18,7 +18,7 @@
         transform: translateY(0);
     }
 }
-@-webkit-keyframes notyf-fadeinleft {
+@-webkit-keyframes lite-n-toasty-fadeinleft {
     0% {
         opacity: 0;
         transform: translateX(25%);
@@ -28,7 +28,7 @@
         transform: translateX(0);
     }
 }
-@keyframes notyf-fadeinleft {
+@keyframes lite-n-toasty-fadeinleft {
     0% {
         opacity: 0;
         transform: translateX(25%);
@@ -38,7 +38,7 @@
         transform: translateX(0);
     }
 }
-@-webkit-keyframes notyf-fadeoutright {
+@-webkit-keyframes lite-n-toasty-fadeoutright {
     0% {
         opacity: 1;
         transform: translateX(0);
@@ -48,7 +48,7 @@
         transform: translateX(25%);
     }
 }
-@keyframes notyf-fadeoutright {
+@keyframes lite-n-toasty-fadeoutright {
     0% {
         opacity: 1;
         transform: translateX(0);
@@ -58,7 +58,7 @@
         transform: translateX(25%);
     }
 }
-@-webkit-keyframes notyf-fadeoutdown {
+@-webkit-keyframes lite-n-toasty-fadeoutdown {
     0% {
         opacity: 1;
         transform: translateY(0);
@@ -68,7 +68,7 @@
         transform: translateY(25%);
     }
 }
-@keyframes notyf-fadeoutdown {
+@keyframes lite-n-toasty-fadeoutdown {
     0% {
         opacity: 1;
         transform: translateY(0);
@@ -94,7 +94,7 @@
         transform: scale(1) translateY(-45%) translateX(13%);
     }
 }
-.notyf {
+.lite-n-toasty {
     position: fixed;
     top: 0;
     left: 0;
@@ -110,8 +110,8 @@
     box-sizing: border-box;
     padding: 20px;
 }
-.notyf__icon--error,
-.notyf__icon--success {
+.lite-n-toasty__icon--error,
+.lite-n-toasty__icon--success {
     height: 21px;
     width: 21px;
     background: #fff;
@@ -120,8 +120,8 @@
     margin: 0 auto;
     position: relative;
 }
-.notyf__icon--error:after,
-.notyf__icon--error:before {
+.lite-n-toasty__icon--error:after,
+.lite-n-toasty__icon--error:before {
     content: "";
     background: currentColor;
     display: block;
@@ -132,14 +132,14 @@
     height: 12px;
     top: 5px;
 }
-.notyf__icon--error:after {
+.lite-n-toasty__icon--error:after {
     transform: rotate(-45deg);
 }
-.notyf__icon--error:before {
+.lite-n-toasty__icon--error:before {
     transform: rotate(45deg);
 }
-.notyf__icon--success:after,
-.notyf__icon--success:before {
+.lite-n-toasty__icon--success:after,
+.lite-n-toasty__icon--success:before {
     content: "";
     background: currentColor;
     display: block;
@@ -147,24 +147,24 @@
     width: 3px;
     border-radius: 3px;
 }
-.notyf__icon--success:after {
+.lite-n-toasty__icon--success:after {
     height: 6px;
     transform: rotate(-45deg);
     top: 9px;
     left: 6px;
 }
-.notyf__icon--success:before {
+.lite-n-toasty__icon--success:before {
     height: 11px;
     transform: rotate(45deg);
     top: 5px;
     left: 10px;
 }
-.notyf__toast {
+.lite-n-toasty__toast {
     display: block;
     overflow: hidden;
     pointer-events: auto;
-    -webkit-animation: notyf-fadeinup 0.3s ease-in forwards;
-    animation: notyf-fadeinup 0.3s ease-in forwards;
+    -webkit-animation: lite-n-toasty-fadeinup 0.3s ease-in forwards;
+    animation: lite-n-toasty-fadeinup 0.3s ease-in forwards;
     box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
     position: relative;
     padding: 0 8px;
@@ -174,40 +174,40 @@
     box-sizing: border-box;
     flex-shrink: 0;
 }
-.notyf__toast--disappear {
+.lite-n-toasty__toast--disappear {
     transform: translateY(0);
-    -webkit-animation: notyf-fadeoutdown 0.3s forwards;
-    animation: notyf-fadeoutdown 0.3s forwards;
+    -webkit-animation: lite-n-toasty-fadeoutdown 0.3s forwards;
+    animation: lite-n-toasty-fadeoutdown 0.3s forwards;
     -webkit-animation-delay: 0.25s;
     animation-delay: 0.25s;
 }
-.notyf__toast--disappear .notyf__icon,
-.notyf__toast--disappear .notyf__message {
-    -webkit-animation: notyf-fadeoutdown 0.3s forwards;
-    animation: notyf-fadeoutdown 0.3s forwards;
+.lite-n-toasty__toast--disappear .lite-n-toasty__icon,
+.lite-n-toasty__toast--disappear .lite-n-toasty__message {
+    -webkit-animation: lite-n-toasty-fadeoutdown 0.3s forwards;
+    animation: lite-n-toasty-fadeoutdown 0.3s forwards;
     opacity: 1;
     transform: translateY(0);
 }
-.notyf__toast--disappear .notyf__dismiss {
-    -webkit-animation: notyf-fadeoutright 0.3s forwards;
-    animation: notyf-fadeoutright 0.3s forwards;
+.lite-n-toasty__toast--disappear .lite-n-toasty__dismiss {
+    -webkit-animation: lite-n-toasty-fadeoutright 0.3s forwards;
+    animation: lite-n-toasty-fadeoutright 0.3s forwards;
     opacity: 1;
     transform: translateX(0);
 }
-.notyf__toast--disappear .notyf__message {
+.lite-n-toasty__toast--disappear .lite-n-toasty__message {
     -webkit-animation-delay: 0.05s;
     animation-delay: 0.05s;
 }
-.notyf__toast--upper {
+.lite-n-toasty__toast--upper {
     margin-bottom: 20px;
 }
-.notyf__toast--lower {
+.lite-n-toasty__toast--lower {
     margin-top: 20px;
 }
-.notyf__toast--dismissible .notyf__wrapper {
+.lite-n-toasty__toast--dismissible .lite-n-toasty__wrapper {
     padding-right: 30px;
 }
-.notyf__ripple {
+.lite-n-toasty__ripple {
     height: 400px;
     width: 400px;
     position: absolute;
@@ -220,7 +220,7 @@
     -webkit-animation: ripple 0.4s ease-out forwards;
     animation: ripple 0.4s ease-out forwards;
 }
-.notyf__wrapper {
+.lite-n-toasty__wrapper {
     display: flex;
     align-items: center;
     padding-top: 17px;
@@ -230,31 +230,31 @@
     position: relative;
     z-index: 10;
 }
-.notyf__icon {
+.lite-n-toasty__icon {
     width: 22px;
     text-align: center;
     font-size: 1.3em;
     opacity: 0;
-    -webkit-animation: notyf-fadeinup 0.3s forwards;
-    animation: notyf-fadeinup 0.3s forwards;
+    -webkit-animation: lite-n-toasty-fadeinup 0.3s forwards;
+    animation: lite-n-toasty-fadeinup 0.3s forwards;
     -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
     margin-right: 13px;
 }
-.notyf__dismiss {
+.lite-n-toasty__dismiss {
     position: absolute;
     top: 0;
     right: 0;
     height: 100%;
     width: 26px;
     margin-right: -15px;
-    -webkit-animation: notyf-fadeinleft 0.3s forwards;
-    animation: notyf-fadeinleft 0.3s forwards;
+    -webkit-animation: lite-n-toasty-fadeinleft 0.3s forwards;
+    animation: lite-n-toasty-fadeinleft 0.3s forwards;
     -webkit-animation-delay: 0.35s;
     animation-delay: 0.35s;
     opacity: 0;
 }
-.notyf__dismiss-btn {
+.lite-n-toasty__dismiss-btn {
     background-color: rgba(0, 0, 0, 0.25);
     border: none;
     cursor: pointer;
@@ -264,8 +264,8 @@
     height: 100%;
     width: 100%;
 }
-.notyf__dismiss-btn:after,
-.notyf__dismiss-btn:before {
+.lite-n-toasty__dismiss-btn:after,
+.lite-n-toasty__dismiss-btn:before {
     content: "";
     background: #fff;
     height: 12px;
@@ -275,25 +275,25 @@
     left: calc(50% - 1px);
     top: calc(50% - 5px);
 }
-.notyf__dismiss-btn:after {
+.lite-n-toasty__dismiss-btn:after {
     transform: rotate(-45deg);
 }
-.notyf__dismiss-btn:before {
+.lite-n-toasty__dismiss-btn:before {
     transform: rotate(45deg);
 }
-.notyf__dismiss-btn:hover {
+.lite-n-toasty__dismiss-btn:hover {
     opacity: 0.7;
     background-color: rgba(0, 0, 0, 0.15);
 }
-.notyf__dismiss-btn:active {
+.lite-n-toasty__dismiss-btn:active {
     opacity: 0.8;
 }
-.notyf__message {
+.lite-n-toasty__message {
     vertical-align: middle;
     position: relative;
     opacity: 0;
-    -webkit-animation: notyf-fadeinup 0.3s forwards;
-    animation: notyf-fadeinup 0.3s forwards;
+    -webkit-animation: lite-n-toasty-fadeinup 0.3s forwards;
+    animation: lite-n-toasty-fadeinup 0.3s forwards;
     -webkit-animation-delay: 0.25s;
     animation-delay: 0.25s;
     line-height: 1.5em;
@@ -303,22 +303,22 @@
     margin: 15px 0 15px 0;
 }
 @media only screen and (max-width: 480px) {
-    .notyf {
+    .lite-n-toasty {
         padding: 0;
     }
-    .notyf__ripple {
+    .lite-n-toasty__ripple {
         height: 600px;
         width: 600px;
         -webkit-animation-duration: 0.5s;
         animation-duration: 0.5s;
     }
-    .notyf__toast {
+    .lite-n-toasty__toast {
         max-width: none;
         border-radius: 0;
         box-shadow: 0 -2px 7px 0 rgba(0, 0, 0, 0.13);
         width: 100%;
     }
-    .notyf__dismiss {
+    .lite-n-toasty__dismiss {
         width: 56px;
     }
 }

@@ -1,4 +1,4 @@
-var Notyf = (function () {
+var LiteNToasty = (function () {
     "use strict";
     var n,
         t,
@@ -49,11 +49,11 @@ var Notyf = (function () {
     (e = v = v || {}).Dismiss = "dismiss";
     var c = {
             types: [
-                { type: "success", className: "notyf__toast--success", backgroundColor: "#3dc763", icon: { className: "notyf__icon--success", tagName: "i" } },
-                { type: "error", className: "notyf__toast--error", backgroundColor: "#ed3d3d", icon: { className: "notyf__icon--error", tagName: "i" } },
-                { type: "info", className: "notyf__toast--info", backgroundColor: "blue", icon: { className: "notyf__icon--info", tagName: "i" } },
+                { type: "success", className: "toasty__toast--success", backgroundColor: "#3dc763", icon: { className: "toasty__icon--success", tagName: "i" } },
+                { type: "error", className: "toasty__toast--error", backgroundColor: "#ed3d3d", icon: { className: "toasty__icon--error", tagName: "i" } },
+                { type: "info", className: "toasty__toast--info", backgroundColor: "blue", icon: { className: "toasty__icon--info", tagName: "i" } },
 
-                { type: "warning", className: "notyf__toast--warning", backgroundColor: "orange", icon: { className: "notyf__icon--warning", tagName: "i" } },
+                { type: "warning", className: "toasty__toast--warning", backgroundColor: "orange", icon: { className: "toasty__icon--warning", tagName: "i" } },
 
             ],
             duration: 2e3,
@@ -75,7 +75,7 @@ var Notyf = (function () {
                     n = this,
                     o = this._popRenderedNotification(t);
                 o &&
-                    ((e = o.node).classList.add("notyf__toast--disappear"),
+                    ((e = o.node).classList.add("toasty__toast--disappear"),
                     e.addEventListener(
                         this.animationEndEventName,
                         (i = function (t) {
@@ -117,10 +117,10 @@ var Notyf = (function () {
                     i = n.options,
                     e = i.icon;
                 this.adjustContainerAlignment(i);
-                var s = this._createHTLMElement({ tagName: "div", className: "notyf__toast" }),
-                    a = this._createHTLMElement({ tagName: "div", className: "notyf__ripple" }),
-                    r = this._createHTLMElement({ tagName: "div", className: "notyf__wrapper" }),
-                    c = this._createHTLMElement({ tagName: "div", className: "notyf__message" });
+                var s = this._createHTLMElement({ tagName: "div", className: "toasty__toast" }),
+                    a = this._createHTLMElement({ tagName: "div", className: "toasty__ripple" }),
+                    r = this._createHTLMElement({ tagName: "div", className: "toasty__wrapper" }),
+                    c = this._createHTLMElement({ tagName: "div", className: "toasty__message" });
                 c.innerHTML = i.message || "";
                 var p,
                     d,
@@ -130,7 +130,7 @@ var Notyf = (function () {
                     h = i.background || i.backgroundColor;
                 e &&
                     "object" == typeof e &&
-                    ((p = this._createHTLMElement({ tagName: "div", className: "notyf__icon" })),
+                    ((p = this._createHTLMElement({ tagName: "div", className: "toasty__icon" })),
                     (d = this._createHTLMElement({ tagName: e.tagName || "i", className: e.className, text: e.text })),
                     (l = null !== (t = e.color) && void 0 !== t ? t : h) && (d.style.color = l),
                     p.appendChild(d),
@@ -139,11 +139,11 @@ var Notyf = (function () {
                     s.appendChild(r),
                     h && (i.ripple ? ((a.style.background = h), s.appendChild(a)) : (s.style.background = h)),
                     i.dismissible &&
-                        ((u = this._createHTLMElement({ tagName: "div", className: "notyf__dismiss" })),
-                        (f = this._createHTLMElement({ tagName: "button", className: "notyf__dismiss-btn" })),
+                        ((u = this._createHTLMElement({ tagName: "div", className: "toasty__dismiss" })),
+                        (f = this._createHTLMElement({ tagName: "button", className: "toasty__dismiss-btn" })),
                         u.appendChild(f),
                         r.appendChild(u),
-                        s.classList.add("notyf__toast--dismissible"),
+                        s.classList.add("toasty__toast--dismissible"),
                         f.addEventListener("click", function (t) {
                             var i, e;
                             null !== (e = (i = o.events)[v.Dismiss]) && void 0 !== e && e.call(i, { target: n, event: t }), t.stopPropagation();
@@ -153,7 +153,7 @@ var Notyf = (function () {
                         return null === (e = (i = o.events)[v.Click]) || void 0 === e ? void 0 : e.call(i, { target: n, event: t });
                     });
                 var m = "top" === this.getYPosition(i) ? "upper" : "lower";
-                return s.classList.add("notyf__toast--" + m), s;
+                return s.classList.add("toasty__toast--" + m), s;
             }),
             (d.prototype._createHTLMElement = function (t) {
                 var i = t.tagName,
@@ -163,7 +163,7 @@ var Notyf = (function () {
                 return e && (o.className = e), (o.textContent = n || null), o;
             }),
             (d.prototype._createA11yContainer = function () {
-                var t = this._createHTLMElement({ tagName: "div", className: "notyf-announcer" });
+                var t = this._createHTLMElement({ tagName: "div", className: "toasty-announcer" });
                 t.setAttribute("aria-atomic", "true"),
                     t.setAttribute("aria-live", "polite"),
                     (t.style.border = "0"),
@@ -196,11 +196,11 @@ var Notyf = (function () {
     function d() {
         (this.notifications = []), (this.events = {}), (this.X_POSITION_FLEX_MAP = { left: "flex-start", center: "center", right: "flex-end" }), (this.Y_POSITION_FLEX_MAP = { top: "flex-start", center: "center", bottom: "flex-end" });
         var t = document.createDocumentFragment();
-        var notyfElement = document.querySelector(".notyf");
-        if(notyfElement){
-            i = notyfElement;
+        var toastyElement = document.querySelector(".toasty");
+        if(toastyElement){
+            i = toastyElement;
         } else{
-            i = this._createHTLMElement({ tagName: "div", className: "notyf" });
+            i = this._createHTLMElement({ tagName: "div", className: "toasty" });
         }
 
         t.appendChild(i), document.body.appendChild(t), (this.container = i), (this.animationEndEventName = this._getAnimationEndEventName()), this._createA11yContainer();
