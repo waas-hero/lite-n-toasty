@@ -45,9 +45,9 @@ Param | Type | Default | Details
 ------------ | ------------- | ------------- | -------------
 duration | `number` | 2000 | Number of miliseconds before hiding the notification. Use `0` for infinite duration.
 ripple | `boolean` | true | Whether to show the notification with a ripple effect
-position | [`Position`](#itoastyposition) | `{x:'right',y:'bottom'}` | Viewport location where notifications are rendered
+position | [`Position`](#position) | `{x:'right',y:'bottom'}` | Viewport location where notifications are rendered
 dismissible | `boolean` | false | Whether to allow users to dismiss the notification with a button
-types | [`NotificationOptions[]`](#itoastynotificationoptions) | Success and error toasts | Array with individual configurations for each type of toast
+types | [`NotificationOptions[]`](#notificationoptions) | Success and error toasts | Array with individual configurations for each type of toast
 
 ### `dismiss(notification: notification)`
 
@@ -122,7 +122,7 @@ Param | Type  | Details
 type | `string` | Notification type for which this configuration will be applied
 className | `string` | Custom class name to be set in the toast wrapper element
 duration | `number` | 2000 | Number of miliseconds before hiding the notification
-icon | [`Icon \| false`](#itoastyicon) | An object with the properties of the icon to be rendered. 'false' hides the icon.
+icon | [`Icon \| false`](#icon) | An object with the properties of the icon to be rendered. 'false' hides the icon.
 background | `string` | Background color of the toast
 message | `string` | Message to be rendered inside of the toast. Becomes the default message when used in the global config.
 ripple | `boolean` | Whether or not to render the ripple at revealing
