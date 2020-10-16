@@ -217,4 +217,4 @@ toasty.error({
 
 ## Inspired By
 
-LiteNToasty is built on and inspired by Notyf. 
+LiteNToasty is built on and inspired by Notyf. https://github.com/caroso1222/notyf
