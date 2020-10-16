@@ -39,15 +39,15 @@ toasty.success('Your changes have been successfully saved!');
 
 You can set some options when creating a LiteNToasty instance.
 
-### `new LiteNToasty(options: INotyfOptions)`
+### `new LiteNToasty(options: CustomOptions)`
 
 Param | Type | Default | Details
 ------------ | ------------- | ------------- | -------------
 duration | `number` | 2000 | Number of miliseconds before hiding the notification. Use `0` for infinite duration.
 ripple | `boolean` | true | Whether to show the notification with a ripple effect
-position | [`INotyfPosition`](#inotyfposition) | `{x:'right',y:'bottom'}` | Viewport location where notifications are rendered
+position | [`Position`](#itoastyposition) | `{x:'right',y:'bottom'}` | Viewport location where notifications are rendered
 dismissible | `boolean` | false | Whether to allow users to dismiss the notification with a button
-types | [`INotyfNotificationOptions[]`](#inotyfnotificationoptions) | Success and error toasts | Array with individual configurations for each type of toast
+types | [`NotificationOptions[]`](#itoastynotificationoptions) | Success and error toasts | Array with individual configurations for each type of toast
 
 ### `dismiss(notification: notification)`
 
@@ -104,7 +104,7 @@ toasty
 
 ## Interfaces
 
-### INotyfPosition
+### Position
 
 Viewport location where notifications are rendered.
 
@@ -113,7 +113,7 @@ Param | Type | Details
 x | `left \| center \| right` | x-position
 y | `top \| center \| bottom` | y-position
 
-### INotyfNotificationOptions
+### NotificationOptions
 
 Configuration interface for each individual toast.
 
@@ -122,13 +122,13 @@ Param | Type  | Details
 type | `string` | Notification type for which this configuration will be applied
 className | `string` | Custom class name to be set in the toast wrapper element
 duration | `number` | 2000 | Number of miliseconds before hiding the notification
-icon | [`INotyfIcon \| false`](#inotyficon) | An object with the properties of the icon to be rendered. 'false' hides the icon.
+icon | [`Icon \| false`](#itoastyicon) | An object with the properties of the icon to be rendered. 'false' hides the icon.
 background | `string` | Background color of the toast
 message | `string` | Message to be rendered inside of the toast. Becomes the default message when used in the global config.
 ripple | `boolean` | Whether or not to render the ripple at revealing
 dismissible | `boolean` | Whether to allow users to dismiss the notification with a button
 
-### INotyfIcon
+### Icon
 
 Icon configuration
 
